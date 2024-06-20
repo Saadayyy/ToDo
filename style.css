@@ -1,0 +1,132 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #282928;
+    margin: 0;
+    padding: 0;
+}
+
+.head {
+    background-color: #3b0707;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.head img {
+    width: 90px;
+    height: auto !important;
+    margin-right: 20px;
+}
+
+.head h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.board {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    -webkit-columns: 2 200px;
+    -moz-columns: 2 200px;
+    columns: 2 200px;
+}
+
+.column {
+    width: calc(100% - 30px);
+    max-width: 350px;
+    margin: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.column h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.task-input {
+    width: 60%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.task {
+    background-color: #e0e0e0;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: move;
+}
+
+.delete-btn {
+    float: right;
+    cursor: pointer;
+}
+
+.add-task-btn {
+    background-color: #4141419c;
+    border: none;
+    padding: 10px;
+    height: 90%;
+    margin-top: 1px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.add-task-btn:hover {
+    background-color: #45a049;
+}
+
+#todo .task {
+    background-color: #b3e5fc;
+}
+
+#in-progress .task {
+    background-color: #ffcdd2;
+}
+
+#done .task {
+    background-color: #c8e6c9;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 5px;
+    cursor: move;
+}
+
+.delete-btn {
+    float: right;
+    cursor: pointer;
+}
+
+.delete-btn .trash-icon {
+    width: 16px;
+    height: 16px;
+}
+.tasks-in-btn {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 3px;
+}

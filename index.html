@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIN.IT</title>
+    <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div class="head">
+        <img src="assets/logo.svg" alt="Logo">
+        <h1>Get Your life in Order</h1>
+    </div>
+    <div class="board">
+        <div class="column" id="todo" ondrop="drop(event, 'todo')" ondragover="allowDrop(event)">
+            <h2>Todo</h2>
+            <hr>
+            <div class="tasks-in-btn">
+                <input type="text" id="taskInput" class="task-input" placeholder="Enter a task..."
+                    oninput="capitalizeInput(this)">
+                <button class="add-task-btn" onclick="addTask('todo')">Add Task</button>
+            </div>
+            <div class="task-container"></div>
+        </div>
+        <div class="column" id="in-progress" ondrop="drop(event, 'in-progress')" ondragover="allowDrop(event)">
+            <h2>In Progress</h2>
+            <hr>
+            <div class="task-container"></div>
+        </div>
+        <div class="column" id="done" ondrop="drop(event, 'done')" ondragover="allowDrop(event)">
+            <h2>Done</h2>
+            <hr>
+            <div class="task-container"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
