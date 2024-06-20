@@ -35,13 +35,11 @@ function createTaskElement(content, id) {
     return task;
 }
 
-
 function deleteTask(taskId) {
     tasks = tasks.filter(task => task.id !== taskId);
     updateLocalStorage();
     renderTasks();
 }
-
 
 function allowDrop(event) {
     event.preventDefault();
@@ -95,3 +93,27 @@ function updateTaskStatus(taskId, newStatus) {
 function updateLocalStorage() {
     localStorage.setItem('tasks', JSON.stringify(tasks));
 }
+
+document.getElementById('start-virtual-mouse').addEventListener('click', () => {
+    fetch('/start-virtual-mouse', { method: 'POST' })
+        .then(response => {
+            if (response.ok) {
+                console.log('Virtual mouse started');
+            } else {
+                console.error('Failed to start virtual mouse');
+            }
+        })
+        .catch(error => console.error('Error:', error));
+});
+
+document.getElementById('stop-virtual-mouse').addEventListener('click', () => {
+    fetch('/stop-virtual-mouse', { method: 'POST' })
+        .then(response => {
+            if (response.ok) {
+                console.log('Virtual mouse stopped');
+            } else {
+                console.error('Failed to stop virtual mouse');
+            }
+        })
+        .catch(error => console.error('Error:', error));
+});
