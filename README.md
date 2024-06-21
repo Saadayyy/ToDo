@@ -34,12 +34,18 @@ git clone https://github.com/yourusername/kanban-virtual-mouse.git
 cd kanban-virtual-mouse
 
 ### Create and Activate a Virtual Environment
+
+```bash
 -python -m venv venv
 -source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
 
 ### install Dependencies
+
+```bash
 pip install -r requirements.txt
 
 ### run app
+
+```bash
 python app.py
 
