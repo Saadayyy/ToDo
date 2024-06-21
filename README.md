@@ -33,13 +33,13 @@ This project is a Kanban board that allows users to manage tasks visually using 
 git clone https://github.com/yourusername/kanban-virtual-mouse.git
 cd kanban-virtual-mouse
 
-## Create and Activate a Virtual Environment
+### Create and Activate a Virtual Environment
 -python -m venv venv
 -source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
 
-## install Dependencies
+### install Dependencies
 pip install -r requirements.txt
 
-## run app
+### run app
 python app.py
 
