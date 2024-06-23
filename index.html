@@ -23,29 +23,45 @@
         <button id="stop-virtual-mouse">Stop Virtual Mouse</button>
     </div>
 
-    <div class="board">
-        <div class="column" id="todo" ondrop="drop(event, 'todo')" ondragover="allowDrop(event)">
-            <h2>Todo</h2>
-            <hr>
-            <div class="tasks-in-btn">
-                <input type="text" id="taskInput" class="task-input" placeholder="Enter a task..."
-                    oninput="capitalizeInput(this)">
-                <button class="add-task-btn" onclick="addTask('todo')">Add Task</button>
-            </div>
-            <div class="task-container"></div>
-        </div>
-        <div class="column" id="in-progress" ondrop="drop(event, 'in-progress')" ondragover="allowDrop(event)">
-            <h2>In Progress</h2>
-            <hr>
-            <div class="task-container"></div>
-        </div>
-        <div class="column" id="done" ondrop="drop(event, 'done')" ondragover="allowDrop(event)">
-            <h2>Done</h2>
-            <hr>
-            <div class="task-container"></div>
+<!-- Container for Sidebar and Board -->
+<div class="container">
+    <!-- Sidebar -->
+    <div id="sidebar" class="sidebar">
+        <button class="toggle-sidebar" onclick="toggleSidebar()">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="sidebar-content">
+            <button class="create-project-btn" onclick="createProject()">Create Project</button>
+            <div id="projectList" class="project-list"></div>
         </div>
     </div>
+
+        <div class="board">
+            <div class="column" id="todo" ondrop="drop(event, 'todo')" ondragover="allowDrop(event)">
+                <h2>Todo</h2>
+                <hr>
+                <div class="tasks-in-btn">
+                    <input type="text" id="taskInput" class="task-input" placeholder="Enter a task..."
+                        oninput="capitalizeInput(this)">
+                    <button class="add-task-btn" onclick="addTask('todo')">Add Task</button>
+                </div>
+                <div class="task-container"></div>
+            </div>
+            <div class="column" id="in-progress" ondrop="drop(event, 'in-progress')" ondragover="allowDrop(event)">
+                <h2>In Progress</h2>
+                <hr>
+                <div class="task-container"></div>
+            </div>
+            <div class="column" id="done" ondrop="drop(event, 'done')" ondragover="allowDrop(event)">
+                <h2>Done</h2>
+                <hr>
+                <div class="task-container"></div>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 
 </html>
+

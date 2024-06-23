@@ -26,19 +26,80 @@ body {
     margin: 0;
 }
 
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    background-color: #3b0707;
+    color: #ffffff;
+    padding: 10px;
+    width: 200px;
+    transition: width 0.3s, padding 0.3s;
+    overflow: hidden;
+}
+
+.sidebar.collapsed {
+    width: 50px;
+    padding: 10px 5px;
+}
+
+.sidebar.collapsed .sidebar-content {
+    display: none;
+}
+
+.toggle-sidebar {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 20px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.create-project-btn {
+    background-color: #4141419c;
+    border: none;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.project-list {
+    margin-top: 10px;
+}
+
+.project-item {
+    background-color: #b3e5fc;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
 .board {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 20px;
-    -webkit-columns: 2 200px;
-    -moz-columns: 2 200px;
-    columns: 2 200px;
+    flex-grow: 1;
+}
+.board {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+    flex-grow: 1;
 }
 
 .column {
     width: calc(100% - 30px);
-    max-width: 350px;
+    max-width: 300px;
     margin: 10px;
     background-color: #fff;
     border-radius: 10px;
@@ -68,10 +129,6 @@ body {
     cursor: move;
 }
 
-.delete-btn {
-    float: right;
-    cursor: pointer;
-}
 
 .add-task-btn {
     background-color: #4141419c;
@@ -81,7 +138,6 @@ body {
     margin-top: 1px;
     color: white;
     text-align: center;
-    text-decoration: none;
     display: inline-block;
     font-size: 15px;
     border-radius: 5px;
@@ -125,8 +181,13 @@ body {
     width: 16px;
     height: 16px;
 }
+
 .tasks-in-btn {
     display: flex;
     justify-content: space-around;
     margin-bottom: 3px;
+}
+.delete-project-btn {
+    float: right;
+    cursor: pointer;
 }
