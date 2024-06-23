@@ -16,9 +16,9 @@ body {
 }
 
 .head img {
-    width: 90px;
+    width: 120px;
     height: auto !important;
-    margin-right: 20px;
+    margin-right: 5px;
 }
 
 .head h1 {
